@@ -1,7 +1,7 @@
 <?php
 require 'application/lib/Dev.php';
 
-//use application\core\Router;
+use application\core\Router;
 
 spl_autoload_register(function($class){
     $path = str_replace('\\', '/', $class.'.php');
@@ -12,7 +12,6 @@ spl_autoload_register(function($class){
 
 session_start();
 
-$router = new application\core\Router;
-//$router = new Router;
+$router = new Router;
 $router->run();
 ?>
