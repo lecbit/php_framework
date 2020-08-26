@@ -5,11 +5,12 @@ use application\core\Controller;
 
 class AccountController extends Controller{
     public function loginAction(){
-        echo 'Страница входа';
+        $this->view->redirect('/');
+        $this->view->render('Вход');
     }
     public function registerAction(){
-        echo 'Страница регистрации';
+        $this->view->layout = 'custom';
+        $this->view->render('Регистрация');
     }
 }
-
 ?>
